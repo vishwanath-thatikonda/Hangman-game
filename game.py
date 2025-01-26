@@ -18,7 +18,7 @@ def valid_words(words):
 def hangman():
     lives = 10
     word = valid_words(words)
-    # we need to store this computer choice in a set
+    # we need to store this computer choice in a set 
     computer_letter = set(word)   # letters in the word
     alphabets = set(string.ascii_uppercase)  
     used_letters = set() # what letters user has guessed
@@ -27,7 +27,14 @@ def hangman():
 
         print(f"You have {lives} left and you have used these letters: {' '.join(used_letters)}")
 
-        word_list = [i if i in used_letters else '-' for i in word ]
+        word_list = [i if i in used_letters else '-' for i in word ] 
+        # result = []
+        # for i in word:
+        #     if i in used_letters:
+        #         result.append(i)
+        #     else:
+        #         print('_')
+
 
         print(f"current word : {' '.join(word_list)}")
 
