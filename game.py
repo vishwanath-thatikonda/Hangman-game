@@ -16,7 +16,7 @@ def valid_words(words):
 # Main function which game starts here...
 
 def hangman():
-    lives = 10
+    lives = 7
     word = valid_words(words)
     # we need to store this computer choice in a set 
     computer_letter = set(word)   # letters in the word
@@ -47,6 +47,18 @@ def hangman():
             else:
                 lives -= 1
                 print("letter not in the word!")
+                x = lives_visual_dict.keys()
+                y = lives_visual_dict
+                visual_lst = list(x)
+                for i in range(len(visual_lst)):
+                    for k,values in lives_visual_dict.items():
+                        if k == i:
+                            if i == lives:
+                                print(values)
+
+            
+
+                    
 
 
         elif user_letter in used_letters:
