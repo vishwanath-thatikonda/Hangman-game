@@ -47,12 +47,12 @@ def hangman():
             else:
                 lives -= 1
                 print("letter not in the word!")
-                x = lives_visual_dict.keys()
-                y = lives_visual_dict
-                visual_lst = list(x)
-                for i in range(len(visual_lst)):
-                    for k,values in lives_visual_dict.items():
-                        if k == i:
+                x = lives_visual_dict.keys() #dict[keys] = {0,1,2,3,4,5,6,7}
+            
+                visual_lst = list(x) # [0,1,2,3,4,5,6,7]
+                for i in range(len(visual_lst)): # len(visual_dict) = 8
+                    for k,values in lives_visual_dict.items(): # key and values in items
+                        if k == i: # if key is equal to index
                             if i == lives:
                                 print(values)
 
